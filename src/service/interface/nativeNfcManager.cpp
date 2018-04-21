@@ -79,7 +79,7 @@ extern "C"
                                      | NFA_TECHNOLOGY_MASK_F_ACTIVE \
                                      | NFA_TECHNOLOGY_MASK_KOVIO)
 #define DEFAULT_DISCOVERY_DURATION       500
-#define READER_MODE_DISCOVERY_DURATION    200
+#define READER_MODE_DISCOVERY_DURATION    50
 #undef MULTI_PROTOCOL_TAG
 /* Transaction Events in order */
 typedef enum transcation_events

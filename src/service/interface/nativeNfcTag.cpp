@@ -64,7 +64,7 @@ extern "C"
 
 //default general trasceive timeout in millisecond
 #define DEFAULT_GENERAL_TRANS_TIMEOUT  2000
-#define DEFAULT_PRESENCE_CHECK_DELAY 125000
+#define DEFAULT_PRESENCE_CHECK_DELAY 50000
 
 /*****************************************************************************
 **
@@ -621,7 +621,7 @@ static BOOLEAN doPresenceCheck ()
             return TRUE;
         }
         NXPLOG_API_D ("%s: presence check for TypeB / TypeA random uid", __FUNCTION__);
-        sPresenceCheckTimer.set(500, presenceCheckTimerProc);
+        sPresenceCheckTimer.set(150, presenceCheckTimerProc);
 
         tNFC_STATUS stat = NFA_RegVSCback (TRUE,nfaVSCNtfCallback); //Register CallBack for VS NTF
         if(NFA_STATUS_OK != stat)
